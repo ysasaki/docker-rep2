@@ -24,7 +24,7 @@ RUN git clone git://github.com/2ch774/p2-php.git ${REP2_DIR}
 RUN curl -O http://getcomposer.org/composer.phar
 RUN php -d detect_unicode=0 composer.phar install
 RUN chmod 0777 data/* rep2/ic
-COPY rep2/conf/conf_admin.inc.php ${REP2_DIR}/conf
+COPY rep2/conf/conf_user_def.inc.php ${REP2_DIR}/conf
 
 # setup 2chproxy
 USER root
